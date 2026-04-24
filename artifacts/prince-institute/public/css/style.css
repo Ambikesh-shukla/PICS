@@ -519,6 +519,8 @@ section { padding: 80px 0; }
 .login-card .logo { justify-content: center; margin-bottom: 20px; }
 .admin-dash { display: none; }
 .admin-dash.show { display: block; }
+.form-success { display: none; }
+.form-success.show { display: flex; }
 .admin-shell.logged { display: block; padding: 0; }
 .dash-header {
   display: flex; justify-content: space-between; align-items: center;

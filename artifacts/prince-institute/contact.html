@@ -51,7 +51,7 @@
       <div>
         <form id="inquiryForm" class="reveal" novalidate>
           <h3 style="margin-bottom:18px">Admission Inquiry</h3>
-          <div id="inquirySuccess" class="contact-card" style="background:var(--bg-soft);display:none">
+          <div id="inquirySuccess" class="contact-card form-success" style="background:var(--bg-soft)">
             <div class="ic">✓</div>
             <div><h4 style="color:var(--primary)">Thank you!</h4><p>Your inquiry has been received. Our team will contact you shortly.</p></div>
           </div>
@@ -127,6 +127,10 @@
         </div>
         <form id="paymentForm" class="pay-method reveal">
           <h3>Submit Payment Confirmation</h3>
+          <div id="paymentSuccess" class="contact-card form-success" style="background:var(--bg-soft)">
+            <div class="ic">✓</div>
+            <div><h4 style="color:var(--primary)">Received!</h4><p>Your payment details have been submitted. We will verify and confirm your seat shortly.</p></div>
+          </div>
           <div class="field"><label>Student Name *</label><input name="name" required></div>
           <div class="field"><label>Course Selected *</label>
             <select name="course" required><option>CCC</option><option>ADCA</option><option>DCA</option><option>Advanced Excel</option><option>Tally Prime</option><option>Web Designing</option></select>

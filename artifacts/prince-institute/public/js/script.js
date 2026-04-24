@@ -244,7 +244,7 @@ function setupInquiryForm() {
   if (courseSel && params.get('course')) courseSel.value = params.get('course');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = form.name.value.trim();
+    const name = form.elements['name'].value.trim();
     const phone = form.phone.value.trim();
     const email = form.email.value.trim();
     let valid = true;
@@ -270,11 +270,12 @@ function setupPaymentForm() {
     if (!form.checkValidity()) { form.reportValidity(); return; }
     const payments = JSON.parse(localStorage.getItem('pics-payments') || '[]');
     payments.unshift({
-      name: form.name.value, course: form.course.value,
-      method: form.method.value, txn: form.txn.value,
+      name: form.elements['name'].value, course: form.course.value,
+      method: form.elements['method'].value, txn: form.txn.value,
       at: new Date().toISOString(),
     });
     localStorage.setItem('pics-payments', JSON.stringify(payments));
+    document.getElementById('paymentSuccess')?.classList.add('show');
     showToast('Payment details submitted. We will verify and confirm.');
     form.reset();
   });
