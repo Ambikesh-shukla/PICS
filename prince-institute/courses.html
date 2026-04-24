@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses — Prince Institute Of Computer Science</title>
+  <meta name="description" content="Explore all computer courses at Prince Institute — CCC, ADCA, DCA, Excel, Tally Prime, Web Designing. Practical training with certificates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="offlineBanner" class="offline-banner"></div>
+
+  <div id="announcement" class="announcement">
+    <span class="ann-text">Admissions Open Now</span>
+    <button class="close-ann" aria-label="Close announcement">×</button>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span><span>Prince Institute<small>Of Computer Science</small></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html#payment">Payment</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☾</button>
+        <a href="contact.html" class="btn btn-primary">Enroll Now</a>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page header -->
+  <section class="hero" style="padding:70px 0 40px">
+    <div class="container">
+      <div class="section-head" style="text-align:left;margin:0">
+        <span class="eyebrow">Our Courses</span>
+        <h1>All Computer Courses</h1>
+        <p>Find a course that matches your goal — beginner certifications, professional diplomas and skill courses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters + Search -->
+  <section style="padding:0 0 30px">
+    <div class="container">
+      <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:24px">
+        <div class="gallery-filters" style="margin:0">
+          <button class="chip active" data-course-filter="all">All</button>
+          <button class="chip" data-course-filter="Beginner">Beginner</button>
+          <button class="chip" data-course-filter="Diploma">Diploma</button>
+          <button class="chip" data-course-filter="Advanced">Advanced</button>
+          <button class="chip" data-course-filter="Skill">Skill</button>
+          <button class="chip" data-course-filter="Professional">Professional</button>
+        </div>
+        <div class="field" style="min-width:240px;margin:0">
+          <input id="courseSearch" type="search" placeholder="Search courses...">
+        </div>
+      </div>
+      <div id="allCourses" class="course-grid"></div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Highlights</span>
+        <h2>What's Included In Every Course</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal"><div class="why-icon">📘</div><h3>Course Material</h3><p>Detailed printed and digital notes covering every topic.</p></div>
+        <div class="why-card reveal"><div class="why-icon">💻</div><h3>Lab Practice</h3><p>Personal computer access for every student during practice.</p></div>
+        <div class="why-card reveal"><div class="why-icon">📝</div><h3>Assignments</h3><p>Real-world assignments that build true understanding.</p></div>
+        <div class="why-card reveal"><div class="why-icon">🎓</div><h3>Certificate</h3><p>Receive a certificate of completion recognized by employers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq">
+        <div class="faq-item"><button class="faq-q">What courses do you offer?</button><div class="faq-a">We offer CCC, ADCA, DCA, Advanced Excel, Tally Prime, Web Designing and many more skill courses.</div></div>
+        <div class="faq-item"><button class="faq-q">Do you provide CCC, ADCA, DCA, Excel, Tally Prime and Web Designing?</button><div class="faq-a">Yes, all of these are core courses at our institute, taught by experienced faculty with full practical sessions.</div></div>
+        <div class="faq-item"><button class="faq-q">Are classes online and offline?</button><div class="faq-a">Yes. You can choose offline classes at our Gorakhpur centre or join live online sessions.</div></div>
+        <div class="faq-item"><button class="faq-q">How do I enroll?</button><div class="faq-a">Click the Enroll Now button or visit the Contact page. You can also call or WhatsApp us directly.</div></div>
+        <div class="faq-item"><button class="faq-q">Is there certificate support?</button><div class="faq-a">Yes, every successful student receives a course completion certificate.</div></div>
+        <div class="faq-item"><button class="faq-q">What payment methods are available?</button><div class="faq-a">UPI, bank transfer, cash and card payments are accepted. EMI options are available on request.</div></div>
+        <div class="faq-item"><button class="faq-q">Can beginners join?</button><div class="faq-a">Absolutely. Most of our students start with no prior computer knowledge — our trainers begin from the basics.</div></div>
+        <div class="faq-item"><button class="faq-q">Do you provide practical training?</button><div class="faq-a">Yes — every theory class is paired with hands-on lab time so you actually learn the skills.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px"><span class="logo-mark">P</span><span>Prince Institute<small>Of Computer Science</small></span></div>
+        <p>Building careers through quality computer education in Gorakhpur and beyond.</p>
+      </div>
+      <div><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h5>Top Courses</h5><ul><li><a href="courses.html">CCC</a></li><li><a href="courses.html">ADCA / DCA</a></li><li><a href="courses.html">Tally Prime</a></li><li><a href="courses.html">Web Designing</a></li></ul></div>
+      <div><h5>Contact</h5><ul><li id="cInfoAddr"></li><li><a data-tel-link id="cInfoPhone"></a></li><li><a id="cInfoEmail"></a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Prince Institute Of Computer Science.</span><span>All rights reserved.</span></div>
+  </footer>
+
+  <a href="#" class="fab whatsapp" data-wa-link target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+  <button class="fab back-top" id="backTop" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast"></div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>

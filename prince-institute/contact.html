@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Admission — Prince Institute Of Computer Science</title>
+  <meta name="description" content="Get in touch with Prince Institute Of Computer Science. Submit your admission inquiry, find our address and payment information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="offlineBanner" class="offline-banner"></div>
+  <div id="announcement" class="announcement">
+    <span class="ann-text">Admissions Open Now</span>
+    <button class="close-ann">×</button>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span><span>Prince Institute<small>Of Computer Science</small></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html#payment">Payment</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle">☾</button>
+        <a href="#inquiryForm" class="btn btn-primary">Enroll Now</a>
+        <button class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:70px 0 40px">
+    <div class="container">
+      <div class="section-head" style="text-align:left;margin:0">
+        <span class="eyebrow">Contact</span>
+        <h1>Talk To Our Admission Team</h1>
+        <p>Fill the form below for a free counselling session — we usually reply within a few hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:20px 0 80px">
+    <div class="container contact-wrap">
+      <!-- Form -->
+      <div>
+        <form id="inquiryForm" class="reveal" novalidate>
+          <h3 style="margin-bottom:18px">Admission Inquiry</h3>
+          <div id="inquirySuccess" class="contact-card" style="background:var(--bg-soft);display:none">
+            <div class="ic">✓</div>
+            <div><h4 style="color:var(--primary)">Thank you!</h4><p>Your inquiry has been received. Our team will contact you shortly.</p></div>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label>Full Name *</label><input name="name" required><small class="error" data-err="name"></small></div>
+            <div class="field"><label>Phone *</label><input name="phone" type="tel" required><small class="error" data-err="phone"></small></div>
+            <div class="field"><label>Email</label><input name="email" type="email"><small class="error" data-err="email"></small></div>
+            <div class="field"><label>Course Of Interest</label>
+              <select name="course">
+                <option>CCC</option><option>ADCA</option><option>DCA</option>
+                <option>Advanced Excel</option><option>Tally Prime</option><option>Web Designing</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field full"><label>Message</label><textarea name="message" placeholder="Tell us your goals or any questions"></textarea></div>
+            <div class="field full">
+              <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <div class="contact-card reveal"><div class="ic">⌂</div><div><h4>Visit Us</h4><p id="cInfoAddr"></p></div></div>
+        <div class="contact-card reveal"><div class="ic">✆</div><div><h4>Call Us</h4><p><a data-tel-link id="cInfoPhone"></a></p></div></div>
+        <div class="contact-card reveal"><div class="ic">✉</div><div><h4>Email</h4><p><a id="cInfoEmail"></a></p></div></div>
+        <div class="contact-card reveal"><div class="ic">⏱</div><div><h4>Office Hours</h4><p id="cInfoHours"></p></div></div>
+        <a data-wa-link target="_blank" rel="noopener" class="btn btn-primary btn-block" style="background:#25d366;margin-top:8px">Chat On WhatsApp</a>
+        <div class="map-wrap reveal" style="margin-top:20px">
+          <p style="margin:0;text-align:center">📍 Map placeholder<br><small>Shivpuri, New Colony, Gorakhpur</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment -->
+  <section id="payment" class="section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Payment</span>
+        <h2>Easy &amp; Secure Fee Payment</h2>
+        <p>Choose any payment method that works for you. After paying, submit the confirmation form below so we can verify and confirm your seat.</p>
+      </div>
+
+      <div class="payment-grid">
+        <div class="pay-method reveal">
+          <h3>UPI Payment</h3>
+          <p>Scan the QR code or pay to the UPI ID below using any UPI app (Google Pay, PhonePe, Paytm).</p>
+          <div class="qr"></div>
+          <p><strong>UPI ID:</strong> <span id="pInfoUpi"></span></p>
+        </div>
+        <div class="pay-method reveal">
+          <h3>Bank Transfer</h3>
+          <p style="margin-bottom:6px"><strong>Bank:</strong> <span id="pInfoBank"></span></p>
+          <p style="margin-bottom:6px"><strong>Account Name:</strong> <span id="pInfoAcName"></span></p>
+          <p style="margin-bottom:6px"><strong>Account No:</strong> <span id="pInfoAcNo"></span></p>
+          <p style="margin-bottom:6px"><strong>IFSC:</strong> <span id="pInfoIfsc"></span></p>
+          <p style="margin-top:14px;padding:12px;background:var(--bg-soft);border-radius:10px"><strong>Cash / Offline:</strong> Visit the institute during office hours to pay in cash and collect your receipt.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px" class="payment-grid">
+        <div class="pay-method reveal">
+          <h3>Enrollment Steps</h3>
+          <ol class="steps">
+            <li>Submit the admission inquiry form above.</li>
+            <li>Talk to our counsellor and pick a course &amp; batch.</li>
+            <li>Pay the fee using UPI, bank transfer or cash.</li>
+            <li>Submit payment confirmation below.</li>
+            <li>Receive batch details and start learning!</li>
+          </ol>
+        </div>
+        <form id="paymentForm" class="pay-method reveal">
+          <h3>Submit Payment Confirmation</h3>
+          <div class="field"><label>Student Name *</label><input name="name" required></div>
+          <div class="field"><label>Course Selected *</label>
+            <select name="course" required><option>CCC</option><option>ADCA</option><option>DCA</option><option>Advanced Excel</option><option>Tally Prime</option><option>Web Designing</option></select>
+          </div>
+          <div class="field"><label>Payment Method *</label>
+            <select name="method" required><option>UPI</option><option>Bank Transfer</option><option>Cash</option><option>Card</option></select>
+          </div>
+          <div class="field"><label>Transaction ID *</label><input name="txn" required></div>
+          <div class="field"><label>Screenshot</label>
+            <input type="file" accept="image/*">
+            <small style="color:var(--text-muted);margin-top:4px">Static demo: file is not uploaded. Hand it to staff or WhatsApp us.</small>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit Payment</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px"><span class="logo-mark">P</span><span>Prince Institute<small>Of Computer Science</small></span></div>
+        <p>Building careers through quality computer education in Gorakhpur and beyond.</p>
+      </div>
+      <div><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h5>Top Courses</h5><ul><li><a href="courses.html">CCC</a></li><li><a href="courses.html">ADCA / DCA</a></li><li><a href="courses.html">Tally Prime</a></li><li><a href="courses.html">Web Designing</a></li></ul></div>
+      <div><h5>Contact</h5><ul><li id="cInfoAddr"></li><li><a data-tel-link id="cInfoPhone"></a></li><li><a id="cInfoEmail"></a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Prince Institute Of Computer Science.</span><span>All rights reserved.</span></div>
+  </footer>
+
+  <a href="#" class="fab whatsapp" data-wa-link target="_blank" rel="noopener">✆</a>
+  <button class="fab back-top" id="backTop">↑</button>
+  <div class="toast" id="toast"></div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>

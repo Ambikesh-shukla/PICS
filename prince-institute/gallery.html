@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Prince Institute Of Computer Science</title>
+  <meta name="description" content="Photo gallery of Prince Institute — classrooms, computer labs, students, faculty, events and certificates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="offlineBanner" class="offline-banner"></div>
+  <div id="announcement" class="announcement">
+    <span class="ann-text">Admissions Open Now</span>
+    <button class="close-ann">×</button>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo"><span class="logo-mark">P</span><span>Prince Institute<small>Of Computer Science</small></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html#payment">Payment</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle">☾</button>
+        <a href="contact.html" class="btn btn-primary">Enroll Now</a>
+        <button class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:70px 0 40px">
+    <div class="container">
+      <div class="section-head" style="text-align:left;margin:0">
+        <span class="eyebrow">Gallery</span>
+        <h1>Life At Prince Institute</h1>
+        <p>Take a look inside our classrooms, computer labs and student events.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:20px 0 80px">
+    <div class="container">
+      <div class="gallery-filters">
+        <button class="chip active" data-gallery-filter="all">All</button>
+        <button class="chip" data-gallery-filter="Classroom">Classroom</button>
+        <button class="chip" data-gallery-filter="Lab">Computer Lab</button>
+        <button class="chip" data-gallery-filter="Students">Students</button>
+        <button class="chip" data-gallery-filter="Faculty">Faculty</button>
+        <button class="chip" data-gallery-filter="Events">Events</button>
+        <button class="chip" data-gallery-filter="Certificates">Certificates</button>
+        <button class="chip" data-gallery-filter="Building">Building</button>
+      </div>
+      <div id="galleryFull" class="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="close-lb">×</button>
+    <img alt="Preview">
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px"><span class="logo-mark">P</span><span>Prince Institute<small>Of Computer Science</small></span></div>
+        <p>Building careers through quality computer education in Gorakhpur and beyond.</p>
+      </div>
+      <div><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h5>Top Courses</h5><ul><li><a href="courses.html">CCC</a></li><li><a href="courses.html">ADCA / DCA</a></li><li><a href="courses.html">Tally Prime</a></li><li><a href="courses.html">Web Designing</a></li></ul></div>
+      <div><h5>Contact</h5><ul><li id="cInfoAddr"></li><li><a data-tel-link id="cInfoPhone"></a></li><li><a id="cInfoEmail"></a></li></ul></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Prince Institute Of Computer Science.</span><span>All rights reserved.</span></div>
+  </footer>
+
+  <a href="#" class="fab whatsapp" data-wa-link target="_blank" rel="noopener">✆</a>
+  <button class="fab back-top" id="backTop">↑</button>
+  <div class="toast" id="toast"></div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>

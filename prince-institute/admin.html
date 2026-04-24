@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — Prince Institute</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- WARNING: This admin panel is a STATIC FRONT-END DEMO ONLY.
+       It uses sessionStorage for "login" and localStorage for "data".
+       It is NOT secure. Do not use in production.
+       To make it real: replace adminInit() / DATA storage with a backend API. -->
+</head>
+<body>
+  <div class="admin-shell">
+
+    <!-- Login -->
+    <form id="loginForm" class="login-card">
+      <div class="logo"><span class="logo-mark">P</span><span>Admin Panel<small>Prince Institute</small></span></div>
+      <div class="field"><label>Username</label><input name="username" autocomplete="off" required></div>
+      <div class="field"><label>Password</label><input name="password" type="password" required></div>
+      <small class="login-error" style="color:#dc2626;display:block;margin:8px 0;min-height:18px"></small>
+      <button class="btn btn-primary btn-block" type="submit">Sign In</button>
+      <p style="margin-top:18px;text-align:center;color:var(--text-muted);font-size:.85rem">
+        Front-end demo only. Static-site management.
+      </p>
+    </form>
+
+    <!-- Dashboard -->
+    <div id="adminDash" class="admin-dash">
+      <div class="dash-header">
+        <div class="logo"><span class="logo-mark">P</span><span>Admin Panel<small>Prince Institute</small></span></div>
+        <div style="display:flex;gap:10px">
+          <button id="themeToggle" class="theme-toggle">☾</button>
+          <a href="index.html" class="btn btn-outline">View Site</a>
+          <button id="logoutBtn" class="btn btn-primary">Logout</button>
+        </div>
+      </div>
+      <div class="dash-body">
+        <aside class="dash-side">
+          <ul>
+            <li class="active" data-section="sec-overview">Overview</li>
+            <li data-section="sec-announcement">Announcement</li>
+            <li data-section="sec-content">Homepage Content</li>
+            <li data-section="sec-courses">Courses</li>
+            <li data-section="sec-testimonials">Testimonials</li>
+            <li data-section="sec-gallery">Gallery</li>
+            <li data-section="sec-contact">Contact Info</li>
+            <li data-section="sec-payment">Payment Info</li>
+            <li data-section="sec-inquiries">Inquiries</li>
+            <li data-section="sec-payments">Payments</li>
+            <li data-section="sec-settings">Settings</li>
+          </ul>
+        </aside>
+        <main class="dash-main">
+
+          <!-- Overview -->
+          <section id="sec-overview" class="dash-section active">
+            <h2>Dashboard</h2>
+            <p>Welcome back. Here's what's happening at your institute.</p>
+            <div class="dash-cards">
+              <div class="dash-card"><div class="num" id="statCourses">0</div><div>Courses</div></div>
+              <div class="dash-card"><div class="num" id="statGallery">0</div><div>Gallery Images</div></div>
+              <div class="dash-card"><div class="num" id="statInq">0</div><div>Inquiries</div></div>
+              <div class="dash-card"><div class="num" id="statPay">0</div><div>Payments</div></div>
+            </div>
+          </section>
+
+          <!-- Announcement -->
+          <section id="sec-announcement" class="dash-section">
+            <h2>Announcement Bar</h2>
+            <div class="field"><label>Message</label><input id="annText"></div>
+            <div class="field"><label><input type="checkbox" id="annVisible"> Show announcement bar on website</label></div>
+            <button id="saveAnnouncement" class="btn btn-primary">Save</button>
+          </section>
+
+          <!-- Homepage content -->
+          <section id="sec-content" class="dash-section">
+            <h2>Homepage Content</h2>
+            <div class="field"><label>Hero Title (HTML allowed)</label><input id="heroT"></div>
+            <div class="field"><label>Hero Subtitle</label><textarea id="heroS"></textarea></div>
+            <div class="field"><label>About Text</label><textarea id="aboutT"></textarea></div>
+            <button id="saveContent" class="btn btn-primary">Save</button>
+          </section>
+
+          <!-- Courses -->
+          <section id="sec-courses" class="dash-section">
+            <h2>Manage Courses</h2>
+            <button id="addCourse" class="btn btn-primary" style="margin-bottom:14px">+ Add Course</button>
+            <table class="dash-table">
+              <thead><tr><th>Title</th><th>Level</th><th>Duration</th><th>Fee</th><th>Image</th><th></th></tr></thead>
+              <tbody id="coursesTable"></tbody>
+            </table>
+          </section>
+
+          <!-- Testimonials -->
+          <section id="sec-testimonials" class="dash-section">
+            <h2>Manage Testimonials</h2>
+            <button id="addTestimonial" class="btn btn-primary" style="margin-bottom:14px">+ Add</button>
+            <table class="dash-table">
+              <thead><tr><th>Name</th><th>Role</th><th>Text</th><th>Rating</th><th></th></tr></thead>
+              <tbody id="testimonialsTable"></tbody>
+            </table>
+          </section>
+
+          <!-- Gallery -->
+          <section id="sec-gallery" class="dash-section">
+            <h2>Manage Gallery</h2>
+            <p style="color:var(--text-muted)">Add the image filename relative to the <code>images/</code> folder.</p>
+            <button id="addImage" class="btn btn-primary" style="margin-bottom:14px">+ Add Image</button>
+            <table class="dash-table">
+              <thead><tr><th>Title</th><th>Category</th><th>Image Path</th><th></th></tr></thead>
+              <tbody id="galleryTable"></tbody>
+            </table>
+          </section>
+
+          <!-- Contact -->
+          <section id="sec-contact" class="dash-section">
+            <h2>Contact Information</h2>
+            <div class="field"><label>Address</label><input id="cAddr"></div>
+            <div class="field"><label>Phone</label><input id="cPhone"></div>
+            <div class="field"><label>WhatsApp Number (with country code, no +)</label><input id="cWa"></div>
+            <div class="field"><label>Email</label><input id="cEmail"></div>
+            <div class="field"><label>Office Hours</label><input id="cHours"></div>
+            <button id="saveContact" class="btn btn-primary">Save</button>
+          </section>
+
+          <!-- Payment -->
+          <section id="sec-payment" class="dash-section">
+            <h2>Payment Information</h2>
+            <div class="field"><label>UPI ID</label><input id="pUpi"></div>
+            <div class="field"><label>Bank Name</label><input id="pBank"></div>
+            <div class="field"><label>Account Name</label><input id="pAcName"></div>
+            <div class="field"><label>Account Number</label><input id="pAcNo"></div>
+            <div class="field"><label>IFSC</label><input id="pIfsc"></div>
+            <button id="savePayment" class="btn btn-primary">Save</button>
+          </section>
+
+          <!-- Inquiries -->
+          <section id="sec-inquiries" class="dash-section">
+            <h2>Admission Inquiries</h2>
+            <table class="dash-table">
+              <thead><tr><th>Date</th><th>Name</th><th>Phone</th><th>Email</th><th>Course</th><th>Message</th></tr></thead>
+              <tbody id="inquiriesTable"></tbody>
+            </table>
+          </section>
+
+          <!-- Payments -->
+          <section id="sec-payments" class="dash-section">
+            <h2>Payment Submissions</h2>
+            <table class="dash-table">
+              <thead><tr><th>Date</th><th>Name</th><th>Course</th><th>Method</th><th>Transaction</th></tr></thead>
+              <tbody id="paymentsTable"></tbody>
+            </table>
+          </section>
+
+          <!-- Settings -->
+          <section id="sec-settings" class="dash-section">
+            <h2>Settings</h2>
+            <p>Reset all demo data and stored entries back to defaults.</p>
+            <button id="resetData" class="btn btn-outline">Reset All Data</button>
+            <p style="margin-top:30px;color:var(--text-muted);font-size:.9rem">
+              <strong>Note:</strong> This admin panel is a static, front-end demo. All data lives in your browser only.
+              For real production, connect a backend (API + database) and proper authentication.
+            </p>
+          </section>
+
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
