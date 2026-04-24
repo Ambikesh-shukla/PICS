@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "4iEOVHYHMIAsFHx132LOP"
+uri = "file://artifacts/prince-institute/public/images/hero.png"
+type = "image"
+title = "hero classroom"
+
+[[generated]]
+id = "lI0MPSS7dUk-n0H-pJ3tE"
+uri = "file://artifacts/prince-institute/public/images/lab1.png"
+type = "image"
+title = "computer lab"
+
+[[generated]]
+id = "Icv2oK4Mk3PbMh5Ulc-y4"
+uri = "file://artifacts/prince-institute/public/images/classroom1.png"
+type = "image"
+title = "classroom one"
+
+[[generated]]
+id = "ETHOvTzsUuuCmwGI3VkZj"
+uri = "file://artifacts/prince-institute/public/images/classroom2.png"
+type = "image"
+title = "classroom two"
+
+[[generated]]
+id = "uIhRP7ZFloPnXIiN0DXq4"
+uri = "file://artifacts/prince-institute/public/images/students1.png"
+type = "image"
+title = "students one"
+
+[[generated]]
+id = "qDR3Y-_94nwQZ54ZOy61y"
+uri = "file://artifacts/prince-institute/public/images/faculty1.png"
+type = "image"
+title = "faculty one"
+
+[[generated]]
+id = "KSQ-Auqwz29b_EmagSUZF"
+uri = "file://artifacts/prince-institute/public/images/faculty2.png"
+type = "image"
+title = "faculty two"
+
+[[generated]]
+id = "VG7N809a981fJGdWuiNxx"
+uri = "file://artifacts/prince-institute/public/images/building.png"
+type = "image"
+title = "institute building"
+
+[[generated]]
+id = "vrOWPa6yAMFiQ3Qt8uP9i"
+uri = "file://artifacts/prince-institute/public/images/event1.png"
+type = "image"
+title = "certificate event"
+
+[[generated]]
+id = "aZBnCctM_Ch1ydEowoRu9"
+uri = "file://artifacts/prince-institute/public/images/cert1.png"
+type = "image"
+title = "certificates stack"
