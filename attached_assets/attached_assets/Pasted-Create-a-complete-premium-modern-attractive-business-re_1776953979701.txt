@@ -1,0 +1,412 @@
+Create a complete, premium, modern, attractive, business-ready **computer institute website** for **Prince Institute Of Computer Science** using **only HTML, CSS, and JavaScript**.
+
+Very important technical rules:
+
+* Use only **HTML, CSS, and JavaScript**
+* Do not use React, Tailwind, Bootstrap, Angular, Vue, TypeScript, PHP, Python, Node.js, Firebase, or any other framework/library/language
+* The project must be separated clearly into folders and files
+* File structure should be like this:
+
+project-folder/
+├── index.html
+├── courses.html
+├── gallery.html
+├── contact.html
+├── admin.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── images/
+│   ├── logo.png
+│   ├── hero.jpg
+│   ├── classroom1.jpg
+│   ├── classroom2.jpg
+│   ├── lab1.jpg
+│   ├── students1.jpg
+│   └── other placeholders
+└── assets/
+└── icons if needed
+
+Strict code rules:
+
+* Maximum layout and content structure should be handled with **HTML first**
+* CSS should be in a completely separate file only
+* JavaScript should be in a completely separate file only
+* No inline CSS
+* No CSS inside HTML
+* No inline JavaScript
+* Keep JavaScript meaningful but do as much structural work as possible in HTML
+* Make the website beginner-friendly, readable, well-commented, and easy to edit
+* The full project must be compatible with **GitHub Pages**
+* Everything must work as a static website
+
+Main business details:
+
+* Institute name: **Prince Institute Of Computer Science**
+* Institute type: Computer training institute
+* Main courses:
+
+  * CCC
+  * ADCA
+  * DCA
+  * Excel
+  * Tally Prime
+  * Web Designing
+  * Other future courses
+* Website goal:
+
+  * Promote the institute
+  * Show course details professionally
+  * Attract admissions
+  * Show institute photos
+  * Provide contact and inquiry options
+  * Show payment interface
+  * Support online course presentation
+  * Include a hidden admin panel for local/front-end management demo
+
+Design style:
+
+* Premium and professional
+* Modern education website
+* Attractive for students and parents
+* Blue/white professional institutional theme inspired by the institute branding
+* Use lots of image sections and large photo blocks
+* Rounded cards, soft shadows, modern spacing, elegant hover effects
+* Responsive for desktop, tablet, and mobile
+* Trust-building, polished, and visually rich
+* Not generic and not overly flashy
+* Smooth transitions and animations using only CSS and JavaScript
+
+Website pages required:
+
+1. index.html
+   Main homepage containing:
+
+* Sticky navigation bar
+* Logo and institute name
+* Menu links
+* Enroll Now button
+* Hero section with headline, subheadline, CTA buttons
+* Stats section
+* About institute section
+* Featured courses preview
+* Why choose us
+* Testimonials preview
+* Gallery preview
+* Online learning section
+* Payment/Enrollment CTA section
+* Contact preview
+* Footer
+
+2. courses.html
+   A detailed course page containing:
+
+* Full course listing
+* Each course in a detailed card or section
+* Course image
+* Course description
+* Benefits
+* Who should join
+* Course duration placeholder
+* Fees placeholder
+* Mode: online/offline
+* Skills covered
+* Enroll button
+* FAQ for courses
+* Comparison or highlights section
+* Course categories filter UI if possible using JavaScript
+
+3. gallery.html
+   A full gallery page containing:
+
+* Photo grid/masonry layout
+* Categories:
+
+  * Classroom
+  * Computer Lab
+  * Students
+  * Faculty
+  * Events
+  * Certificates
+  * Institute Building
+* Click-to-preview lightbox
+* Image upload placeholders for future replacement
+* Strong visual focus on photos
+
+4. contact.html
+   A contact/admission page containing:
+
+* Admission inquiry form
+* Name, Phone, Email, Course, Message fields
+* Address block
+* WhatsApp contact button
+* Phone block
+* Email block
+* Google Maps placeholder
+* Inquiry confirmation UI
+* Strong call-to-action for admission
+
+5. admin.html
+   A hidden admin panel page for demo/local use only
+
+Admin panel requirements:
+
+* Login form with:
+
+  * Username: **Hello**
+  * Password: **Sirji**
+* Do not show admin link in main navbar
+* Admin page should feel secret/hidden
+* Only accessible by opening admin.html directly
+* After login, show an admin dashboard interface
+* This is only front-end demo protection using JavaScript
+* Store login session in localStorage or sessionStorage
+* Add logout button
+* Important: add a code comment warning that this is not secure for real production and is only suitable for static demo projects
+
+Admin dashboard features:
+
+* Dashboard overview cards
+* Manage featured courses
+* Manage homepage text blocks
+* Manage gallery image entries
+* Manage testimonials
+* Manage fees placeholders
+* Manage contact info
+* Manage payment instructions
+* Manage dark/light theme preference
+* Manage site announcement banner
+* All changes should be saved in localStorage for static-site simulation
+* Add reset button to restore default demo content
+* Add image entry management area where admin can:
+
+  * Add image title
+  * Add image path/filename
+  * Add image category
+  * Add description
+* Add course management area where admin can:
+
+  * Edit course title
+  * Edit description
+  * Edit fee placeholder
+  * Edit duration
+  * Edit badge/level
+* Add testimonial management area
+* Add announcement bar editor like “Admissions Open Now”
+
+Main features required on the whole website:
+
+1. Dark / Light Mode
+
+* Toggle button in header
+* Smooth switching
+* Save preference in localStorage
+* Both themes should look premium
+
+2. Offline Mode Support
+
+* Add offline-friendly behavior using JavaScript and static techniques
+* Show an offline status banner when internet is disconnected
+* Use browser storage to keep essential content available
+* If possible, include a simple service worker setup suggestion or placeholder files for offline support while keeping the project mostly HTML/CSS/JS
+* Make homepage basics viewable offline
+* Show a nice offline message instead of broken experience
+
+3. Payment Interface
+
+* Create a clean, professional payment section
+* Since this is static Phase 1, do not build real gateway integration
+* Instead create a premium payment interface UI with:
+
+  * UPI payment option
+  * QR code placeholder
+  * Bank details placeholder
+  * Cash / offline payment note
+  * “Submit payment screenshot” placeholder UI
+  * Payment instructions card
+  * Enrollment steps
+* Add confirmation form for students after payment:
+
+  * Student name
+  * Course selected
+  * Payment method
+  * Transaction ID
+  * Screenshot upload placeholder note
+* Make it look polished and trustworthy
+
+4. Course Detail System
+
+* Each major course should have expanded detail sections
+* Include:
+
+  * Overview
+  * Topics covered
+  * Benefits
+  * Career scope
+  * Duration placeholder
+  * Fees placeholder
+  * Learning mode
+  * Certificate support note
+* Main courses to fully detail:
+
+  * CCC
+  * ADCA
+  * DCA
+  * Excel
+  * Tally Prime
+  * Web Designing
+
+5. Image-Heavy Design
+
+* Use lots of image placeholders throughout the website
+* Make the site visually rich
+* Add dedicated image areas in:
+
+  * Hero
+  * About
+  * Courses
+  * Gallery
+  * Testimonials
+  * Faculty
+  * Institute highlights
+* Design must be ready for many real institute photos later
+
+6. Image Uploading Area
+
+* Since this is static only, create a front-end image management area inside admin panel
+* Allow admin to:
+
+  * Choose/display local image preview for demo purposes
+  * Or enter image path manually from images folder
+* Clearly structure the site so image paths can be easily replaced later
+* Use multiple placeholder image slots in gallery and hero banners
+
+7. Admission Inquiry System
+
+* Nice forms
+* Validation using JavaScript
+* Success message UI
+* Course dropdown
+* WhatsApp button
+* Enroll now CTA repeated across pages
+
+8. Testimonials Section
+
+* Slider or card layout
+* Student photo placeholders
+* Star-style rating visuals
+* Editable from admin panel through localStorage
+
+9. Faculty Section
+
+* Trainer cards
+* Photo placeholders
+* Expertise, subject, role
+* Strong institutional style
+
+10. FAQ Section
+    Include questions such as:
+
+* What courses do you offer?
+* Do you provide CCC, ADCA, DCA, Excel, Tally Prime, Web Designing?
+* Are classes online and offline?
+* How do I enroll?
+* Is there certificate support?
+* What payment methods are available?
+* Can beginners join?
+* Do you provide practical training?
+
+11. Announcement Bar
+
+* Top announcement ribbon editable from admin panel
+* Example: “Admissions Open for New Batch”
+* Hide/show option from admin panel
+
+12. Search and Filter
+
+* Add course search/filter on courses page
+* Add gallery category filter on gallery page
+
+13. Back to Top Button
+
+* Smooth floating button
+
+14. Sticky WhatsApp Contact Button
+
+* Visible floating contact shortcut
+
+15. Responsive Mobile Menu
+
+* Hamburger menu
+* Smooth open/close animation
+
+16. Reveal on Scroll Animations
+
+* Subtle and clean
+* Use JavaScript and CSS only
+
+17. SEO-ready basic structure
+
+* Proper title tags
+* Meta description placeholders
+* Semantic HTML5
+* Proper alt text placeholders for images
+
+Important user experience details:
+
+* Make navigation smooth and premium
+* Strong CTA buttons across site
+* Good readability
+* Balanced spacing
+* Soft professional animations
+* Big modern hero section
+* Trust-building statistics
+* Admission-focused design language
+
+Content writing tone:
+
+* Professional English
+* Student-friendly
+* Admission-focused
+* Trustworthy
+* Clear and persuasive
+* Suitable for a real Indian computer institute
+
+Important implementation note:
+Because this is a static HTML/CSS/JS website:
+
+* The admin panel, login, course editing, testimonial editing, theme saving, and announcement editing should work using localStorage/sessionStorage only
+* Do not pretend there is a real secure backend
+* Add comments in code explaining where a real backend can be connected later
+* Keep everything functional as a demo/static management system
+
+Required output:
+Provide the complete website as separated files with full code for:
+
+* index.html
+* courses.html
+* gallery.html
+* contact.html
+* admin.html
+* css/style.css
+* js/script.js
+
+Optional but encouraged:
+
+* service-worker.js for offline support
+* images folder placeholders
+* clear comments showing where to replace image paths and payment details
+
+Final reminders:
+
+* Use only HTML, CSS, and JavaScript
+* Maximum structural work in HTML
+* Separate CSS and JS files properly
+* Do not use frameworks
+* Keep the design premium, image-rich, modern, and business-ready
+* Hidden admin login should use:
+
+  * Username: Hello
+  * Password: Sirji
+* Make it look like a real institute website ready for admissions and online course promotion
