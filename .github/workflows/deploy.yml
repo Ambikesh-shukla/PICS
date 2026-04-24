@@ -28,6 +28,8 @@ jobs:
       - name: Prepare site files
         run: |
           mkdir -p _site
+          # Prevent Jekyll processing (required for files starting with _ or .)
+          touch _site/.nojekyll
           # Copy all HTML pages
           cp artifacts/prince-institute/*.html _site/
           # Copy static assets (css, js, images, etc.)
